@@ -1,6 +1,6 @@
-`ENCRYPTION -DECRYTPTION on Cryptography` FOR `[RSA][CAESAR][VIGENERE]`
+# **ENCRYPTION -DECRYTPTION on Cryptography FOR [RSA][CAESAR][VIGENERE]**
 
-`INTRODUCTION`
+**`INTRODUCTION`**
 
 [RSA]
 
@@ -18,7 +18,7 @@ also known as Shift Cipher.
 
   Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution. A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets. The encryption of the original text is done using the Vigenère square or Vigenère table.
 
-`OBJECTIVE`
+**`OBJECTIVE`**
 
 a) To build a system that can receive input freom the user and generate automatically output in easy way and short time.
 
@@ -30,7 +30,7 @@ d) To build Confidentiality, Authenticity, Integrity of information
 
 e) To protect the data against corruption
 
-`BENEFITS`
+**`BENEFITS`**
 
 Cryptography is an essential information security tool. It provides the four most basic services of information security −
 
@@ -44,6 +44,6 @@ Cryptography is an essential information security tool. It provides the four mos
 
 All these fundamental services offered by cryptography has enabled the conduct of business over the networks using the computer systems in extremely efficient and effective manner.
 
-`4W's and 1H`
+**`4W's and 1H`**
 
 
