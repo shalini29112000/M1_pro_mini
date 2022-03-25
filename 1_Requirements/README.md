@@ -1,4 +1,4 @@
-# **ENCRYPTION -DECRYTPTION on Cryptography FOR [RSA][CAESAR][VIGENERE]**
+# **ENCRYPTION -DECRYTPTION on Cryptography FOR [RSA]**
 
 ## **`INTRODUCTION`**
 
@@ -8,23 +8,13 @@
 
   RSA makes use of prime numbers (arbitrary large numbers) to function. The public key is made available publicly (means to everyone) and only the person having the private key with them can decrypt the original message.
 
-[CAESAR]
-
-  The first substitution in the world of data security was in the reign of Julius Caesar, so it was declared
-by the name of Caesar Cipher, which replaced the initial letter position of alphabet [6], caesar cipher
-also known as Shift Cipher.
-
-[VIGENERE]
-
-  Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution. A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets. The encryption of the original text is done using the Vigenère square or Vigenère table.
-
 ## **`OBJECTIVE`**
 
 a) To build a system that can receive input freom the user and generate automatically output in easy way and short time.
 
 b) To build an algorithm which detects the security of the message all times round. 
 
-c) Combination of Caesar Cipher Algorithm and Rivest Shamir Adleman Algorithm for Securing Document Files and Text Messages
+c) Combination of Ciphering Algorithm and Rivest Shamir Adleman Algorithm for Securing Document Files and Text Messages
 
 d) To build Confidentiality, Authenticity, Integrity of information
 
@@ -46,18 +36,86 @@ All these fundamental services offered by cryptography has enabled the conduct o
 
 ## **`4W's and 1H`**
 
-### Who
+### Who:
 
 The daily mobile user to a military, to a space shuttle.
 
-### What
+### What:
  
 The Cryptography to ensure encryption and decrytion of any real time applications are use to validate safety in the data transmission without being hacked by employing  cipher techniques
 
-### When
+### When:
 
 It is can be applied when the plain text is being transmitted over the channel after encountering certain ciphering of the text to ensure security and authenticity of the sender and the receiver.
 
-### Where
+### Where:
+
+It can be applied from the Underwater Sensor Communication to the satellite application. From a household use to the worldwide application
+
+### Who:
+
+This project is implemented to nullify security issuing, return the text essage after being encrypted.
+
+## **`SWOT ANALYSIS`**
+
+### Strengths:
+
+a)Simple and Easy to use.
+
+b) Sharing public key to users is easy.
+
+c) Tracking the rhythmn of the code is tedious for higher prime number.
+
+d) Highly Secure, Scalable & Reliable.
+
+e) RSA algorithm is safe and secure for transmitting confidential data.
 
 
+
+### Weakness:
+
+a) Data stored is prone to Cyber Attacks
+
+b) Tracking rhythmn of the prime number <23 is high
+
+c) It has slow data transfer rate due to large numbers involved.
+
+d) It requires third party to verify the reliability of public keys sometimes.
+
+e) High processing is required at receiver’s end for decryption.
+
+## **`OPPORTUNITEIS`**
+
+Efforts to lower such costs have been met with success in recent years, and new innovations on the horizon will soon offer organizations better ways to protect themselves from both current and emerging cybersecurity threats. IBM conveyed that message during its recent “Future of Cryptography” online event, citing advances in three critical emerging areas of data privacy and encryption: 
+
+  ~ Confidential computing, 
+  ~ Quantum-safe cryptography
+  ~ Fully homomorphic encryption.
+
+## **`HIGH LEVEL REQUIREMENTS`**
+
+   RID	    DESCRIPTION	  STATUS
+   
+   HLR1	    C LANGUAGE	  IMPLEMENTED
+   
+   HLR2	    OS WINDOWS	  IMPLEMENTED
+   
+   HLR3	    OS LINUX	    IMPLEMENTED
+   
+   HLR4	    HARDDISK	    IMPLEMENTED
+   
+   HLR5	    RAM 4GB	      IMPLEMENTED
+  
+## **`LOW LEVEL REQUIREMENTS`**
+
+    RID	    DESCRIPTION	        STATUS
+    
+    LLR1	  PRIME CHECK 1	      IMPLEMENTED
+    
+    LLR2	  PRIME CHECK 2	      IMPLEMENTED
+    
+    LLR3	  TOTIENT DERIVATION	IMPLEMENTED
+    
+    LLR4	  ENCRYPTION	        IMPLEMENTED
+    
+    LLR5	  DECRYPTION	        IMPLEMENTED
