@@ -14,5 +14,5 @@
     * Return the encrypted message after ciphering
 * **decrypt** function must return
     * Return the decrypted message after ciphering.
-* The function must not use any printf and scanf functions
+* The function must not use any printf and scanf functions.
 * Supporting functions can be used to read and print data to and from console.
