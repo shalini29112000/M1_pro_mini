@@ -94,17 +94,17 @@ Efforts to lower such costs have been met with success in recent years, and new 
 
 ## **`HIGH LEVEL REQUIREMENTS`**
 
-    RID	    DESCRIPTION	  STATUS
+    RID	    DESCRIPTION	      STATUS
    
-    HLR1	    C LANGUAGE	  IMPLEMENTED
+    HLR1	    C LANGUAGE	    IMPLEMENTED
    
-    HLR2	    OS WINDOWS	  IMPLEMENTED
+    HLR2	    OS WINDOWS	    IMPLEMENTED
    
-    HLR3	    OS LINUX	    IMPLEMENTED
+    HLR3	    OS LINUX	      IMPLEMENTED
    
-    HLR4	    HARDDISK	    IMPLEMENTED
+    HLR4	    HARDDISK	      IMPLEMENTED
    
-    HLR5	    RAM 4GB	      IMPLEMENTED
+    HLR5	    RAM 4GB	        IMPLEMENTED
   
 ## **`LOW LEVEL REQUIREMENTS`**
 
