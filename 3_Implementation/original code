@@ -1,1 +1,114 @@
-
+#include "stdio.h"
+#include "conio.h" 
+#include "stdlib.h" 
+#include "math.h"
+#include "string.h"
+long int p,q,n,t,flag,e[100],d[100],temp[100],j,m[100],en[100],i,cl,res,li; //p &q are prime numbers
+char msg[100]; 
+int main(){
+    printf("\nENTER FIRST PRIME NUMBER\n");
+	scanf("%d",&p); // 1st prime number
+    int i; 
+	j=sqrt(p); 
+	for (i=2;i<=j;i++) { 
+		if(p%i==0) 
+		    flag = 0;
+    }
+	flag = 1; 
+    if(flag==0) { 
+		printf("\nFALSE INPUT!... SEE THROUGH IT\n"); // since the prime numbers should be non-zero 
+		getch(); 
+		exit(1); 
+	}
+    printf("\nENTER SECOND PRIME NUMBER\n"); 
+	scanf("%d",&q); // 2nd prime number
+    int l; 
+	//j=sqrt(q); 
+	for (l=2;l<=j;l++) { 
+		if(q%l==0) 
+		    flag = 0;
+    }
+	flag = 1; 
+    if(flag==0||p==q) { //neither should the integer be non-zero or 'equal'
+		printf("\nWRONG INPUT!... SEE THROUGH EITHER ONE OF THE INPUT IS ''0 OR SAME VALUE AS BEFORE\n"); 
+		getch(); 
+		exit(1); 
+	} 
+    fflush(stdin);  //to flush the output buffer of the stream 
+	scanf("%s",msg);
+	for (cl=0;msg[cl]!=NULL;cl++) {	
+	m[cl]=msg[cl]; 
+	}
+	n=p*q; // n is the modulus of both os the keys 
+	t=(p-1)*(q-1); // to calculate the totient of the function 
+    int k; 
+	k=0; 
+	for (int li=2;li<t;li++) { 
+		if(t%li==0) 
+		    continue; 
+		int io; 
+	    j=sqrt(p); 
+	    for (io=2;io<=j;io++) { 
+		if(p%io==0) 
+		    flag = 0;
+        }
+	    flag = 1; 
+		if(flag==1&&li!=p&&li!=q) { 
+			e[k]=li;
+            long int z=1; 
+	        while(1) { 
+		        z=z+t; 
+		        if(z%e[k]==0) 
+		            res = z/e[k]; 
+	        }
+			flag=res;
+			if(flag>0) {
+				d[k]=flag;
+				k++;
+			}
+			if(k==99)  
+			        break;
+		} 
+	}
+    printf("\nPOSSIBLE VALUES OF e AND d ARE\n"); 
+	for (li=0;li<j-1;li++) 
+	printf("\n%ld\t%ld",e[li],d[li]); 
+    long int pt,ct,key=e[0],enk,len; // Encryption of the message
+	int eni=0;
+	len=strlen(msg);
+	while(eni!=len) {
+		pt=m[eni]; 
+		pt=pt-96;
+		enk=1;
+		for (int enj=0;enj<key;enj++) {
+			enk=enk*pt;
+			enk=enk%n;
+		}
+		temp[eni]=enk;
+		ct=enk+96;
+		en[eni]=ct;
+		eni++;
+	}
+	en[eni]=-1;
+	printf("\nTHE ENCRYPTED MESSAGE IS\n");
+	for (eni=0;en[eni]!=-1;eni++)
+	printf("%c",en[eni]);
+    long int pt1,ct1,key1=d[0],dek;// decryption of the message
+	int dei=0;
+	while(en[dei]!=-1) {
+		ct1=temp[dei];
+		k=1;
+		for (int dej=0;dej<key1;dej++) {
+			dek=dek*ct;
+			dek=dek%n;
+		}
+		pt1=dek+96;
+		m[dei]=pt1;
+		dei++;
+	}
+	m[dei]=-1;
+	printf("\nTHE DECRYPTED MESSAGE IS\n");
+	for (dei=0;m[dei]!=-1;dei++) 
+	printf("%c",m[dei]);
+    return 0;
+}
