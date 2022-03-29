@@ -2,9 +2,9 @@
 # define __MATH_PRIMES__
 
 typedef struct  s_primes {
-  long		limit_used;
-  long		length;
-  long		*primes;
+  long	limit_used;
+  long	length;
+  long	*primes;
 } t_primes;
 
 /**
@@ -18,18 +18,18 @@ extern t_primes	g_prime_list;
 /**
   Greatest Common Denominator: largest number that can devide two numbers
 **/
-long		gcd(long a, long b);
+long	gcd(long a, long b);
 
 /**
   Simple memory effecient way to determine if a number is prime
 **/
-char		is_prime(long number);
+char	is_prime(long number);
 
 /**
    Implementation of Sieve of Eratosthenes
    Will populate the global variable g_prime_list with an array of prime numbers
    up to limit, the limit used, and the number of primes found (length)
 **/
-void		sieve_of_eratosthenes(long limit);
+void	sieve_of_eratosthenes(long limit);
 
 #endif
