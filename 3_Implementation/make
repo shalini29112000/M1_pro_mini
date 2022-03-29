@@ -7,15 +7,15 @@ NAME_TESTS	= rsa_tests
 CFLAGS		= -Iinclude/ -W -Wall -Wextra -march=native -ggdb3
 LDFLAGS		= -lm
 
-SRCS_TEST	= src/modulars.c			\
-		  src/prime_algo.c				\
-		  src/rsa_algo.c				\
-		  src/test.c
+SRCS_TEST	= source/modular_contri_algo.c			\
+		  source/prime_algo.c				\
+		  source/rsa_algo.c				\
+		  source/rsa_test.c
 OBJS_TEST	= $(SRCS_TEST:.c=.o)
 
-SRCS		= src/modulars.c			\
-		  src/primes.c				\
-		  src/rsa.c				\
+SRCS		= src/modular_contri_algo.c			\
+		  src/prime_algo.c				\
+		  src/rsa_algo.c				\
 		  src/main.c
 OBJS		= $(SRCS:.c=.o)
 
