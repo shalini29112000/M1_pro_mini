@@ -19,19 +19,19 @@
 
 #ifndef __RSA__
 # define __RSA__
-# define	RSA_SIEVE_LIMIT 255
+# define RSA_SIEVE_LIMIT 255
 
 typedef struct	s_rsa {
-  long		n;
-  long		fi;
-  long		e;
-  long		d;
+  long	num;
+  long	fi;
+  long	e;
+  long	d;
 } t_rsa;
 
-t_rsa		rsa_keygen(long p, long q);
+t_rsa	rsa_keygen(long p, long q);
 
-long		rsa_encrypt(long msg, long e, long n);
-long		rsa_decrypt(long cyphertext, long d, long n);
+long	rsa_encrypt(long msg, long e, long num);
+long	rsa_decrypt(long cyphertext, long d, long num);
 
 #endif
 © 2022 GitHub, Inc.
