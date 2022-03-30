@@ -2,10 +2,10 @@
 	RSA Algorithm
 	Result reminder: ((m**e)**d) % n = m
 	e: encryption, d: decryption, 
-  Encryption: ciphertext = message**e	% n
+  	Encryption: ciphertext = message**e	% n
 	Decryption: (c**d == (m**e)**d == m )	% n
 	RSA Key Generation
-	p and q, two distrinct prime numbers
+	p and q, are prime numbers
 	n = pq
 	fi is Euler's Totient Function
 	fi(n) = fi(p) * fi(q) = (p - 1) * (q - 1) = n - (p + q - 1)
@@ -28,21 +28,9 @@ typedef struct	s_rsa {
   long	d;
 } t_rsa;
 
-t_rsa	rsa_keygen(long p, long q);
+t_rsa	rsa_keygen(long p, long q);// function creation
 
 long	rsa_encrypt(long msg, long e, long num);
 long	rsa_decrypt(long cyphertext, long d, long num);
 
 #endif
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
