@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "rsa.h"
-#include "primes.h"
+#include "rsaAlgo.h"
+#include "primeAlgo.h"
 
-int		main(int ac, char **av)
+int main(int ac, char **av)
 {
   long		p, q;
   srandom(time(NULL));
-  printf("This program can accept 3 paramaters or no paramaters.\n\n");
+  //printf("This program can accept 3 paramaters or no paramaters.\n\n");
   printf("To use:\n%s <p> <q> <limit>\n%s\n\n", av[0], av[0]);
-  printf("Paramaters: p and q for RSA keygen, limit is to limit the Sieve. \n");
+  //printf("Paramaters: p and q for RSA keygen, limit is to limit the Sieve. \n");
   printf("If no paramaters are given random values will be used for p and q,\n");
-  printf("and the Sieve will default to a defined value.\n\nStarting...\n\n");
+  //printf("and the Sieve will default to a defined value.\n\nStarting...\n\n");
   if (ac >= 4)
     {
       p = atol(av[1]);
