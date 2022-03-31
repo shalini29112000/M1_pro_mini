@@ -6,7 +6,7 @@
 
 int main(int ac, char **av)
 {
-  long		p, q;
+  long	p, q;
   srandom(time(NULL));
   //printf("This program can accept 3 paramaters or no paramaters.\n\n");
   printf("To use:\n%s <p> <q> <limit>\n%s\n\n", av[0], av[0]);
@@ -25,8 +25,8 @@ int main(int ac, char **av)
       sieve_of_eratosthenes(RSA_SIEVE_LIMIT);
       
       //to generate p and q
-      p = g_prime_list.primes[random() % g_prime_list.length];
-      q = g_prime_list.primes[random() % g_prime_list.length];
+      p = g_prime_list.primeAlgo[random() % g_prime_list.length];
+      q = g_prime_list.primeAlgo[random() % g_prime_list.length];
     }
   printf("P used: %ld, Q used: %ld\n", p, q);
 
@@ -38,6 +38,6 @@ int main(int ac, char **av)
 	 p, q, results.n, results.fi, results.e, results.d);
 
   if (g_prime_list.length != 0)
-    free(g_prime_list.primes);
+    free(g_prime_list.primeAlgo);
   return 0;
 }
