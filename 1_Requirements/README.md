@@ -94,28 +94,28 @@ Efforts to lower such costs have been met with success in recent years, and new 
 
 ## **`HIGH LEVEL REQUIREMENTS`**
 
-    RID	    DESCRIPTION	      STATUS
+      RID	    DESCRIPTION	            STATUS
    
-    HLR1	    C LANGUAGE	    IMPLEMENTED
+      HLR1	    C LANGUAGE	          IMPLEMENTED
    
-    HLR2	    OS WINDOWS	    IMPLEMENTED
+      HLR2	    OS WINDOWS	          IMPLEMENTED
    
-    HLR3	    OS LINUX	      IMPLEMENTED
+      HLR3	    OS LINUX	            IMPLEMENTED
    
-    HLR4	    HARDDISK	      IMPLEMENTED
+      HLR4	    HARDDISK	            IMPLEMENTED
    
-    HLR5	    RAM 4GB	        IMPLEMENTED
+      HLR5	    RAM 4GB	              IMPLEMENTED
   
 ## **`LOW LEVEL REQUIREMENTS`**
 
-    RID	    DESCRIPTION	        STATUS
+      RID	    DESCRIPTION	            STATUS
     
-    LLR1	  PRIME CHECK 1	      IMPLEMENTED
+      LLR1	  PRIME CHECK 1	          IMPLEMENTED
     
-    LLR2	  PRIME CHECK 2	      IMPLEMENTED
+      LLR2	  PRIME CHECK 2	          IMPLEMENTED
     
-    LLR3	  TOTIENT DERIVATION	IMPLEMENTED
+      LLR3	  TOTIENT DERIVATION	    IMPLEMENTED
     
-    LLR4	  ENCRYPTION	        IMPLEMENTED
+      LLR4	  ENCRYPTION	            IMPLEMENTED
     
-    LLR5	  DECRYPTION	        IMPLEMENTED
+      LLR5	  DECRYPTION	            IMPLEMENTED
