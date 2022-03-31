@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "primes.h"
-#include "modulars.h"
-#include "rsa.h"
+#include "primeAlgo.h"
+#include "modAlgo.h"
+#include "rsaAlgo.h"
 
 //Test main for modular_exponents.c
-int		main_modular_exponents(int ac, char **av, char **env)
+int	main_modular_exponents(int ac, char **av, char **env)
 {
   long		result_simple;
   long		result_right_to_left;
@@ -34,13 +34,13 @@ int		main_primes(int ac, char **av, char **env)
   sieve_of_eratosthenes(255);
   printf("Limit used: %ld, Primes Found: %ld\n", g_prime_list.limit_used, g_prime_list.length);
   for (long i = 0; i < g_prime_list.length; i++)
-    printf("%ld, ", g_prime_list.primes[i]);
+    printf("%ld, ", g_prime_list.primeAlgo[i]);
   printf("\n");
   for (long i = 0; i < g_prime_list.length; i++)
     {
-      if (!is_prime(g_prime_list.primes[i]))
+      if (!is_prime(g_prime_list.primeAlgo[i]))
 	{
-	  printf("is_prime detected non prime: %ld\n", g_prime_list.primes[i]);
+	  printf("is_prime detected non prime: %ld\n", g_prime_list.primeAlgo[i]);
 	  return 0;
 	}
     }
@@ -49,7 +49,7 @@ int		main_primes(int ac, char **av, char **env)
 
 int		main_rsa(int ac, char **av, char **env)
 {
-  t_rsa		results = rsa_keygen(61, 53);
+  t_rsa	results = rsa_keygen(61, 53);
 
   printf("RSA Keygen Controled Test\np: %ld, q: %ld\n", 61, 53);
   printf("N: %ld, fi: %ld, Chosen e: %ld, d: %ld\n",
@@ -94,15 +94,15 @@ int		main(int ac, char **av, char **env)
   if (main_modular_exponents(ac, av, env))
     puts("SUCCESS!\n");
   else
-    puts("FAILED\n");
+    puts("FAILURE\n");
 
   if (main_primes(ac, av, env))
     puts("SUCESS!\n");
   else
-    puts("FAILED\n");
+    puts("FAILURE\n");
 
   main_rsa(ac, av, env);
   
-  printf("Done\n\n");
+  printf("Completed\n\n");
   return 0;
 }
