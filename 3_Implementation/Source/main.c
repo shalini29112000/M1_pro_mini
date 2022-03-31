@@ -31,7 +31,7 @@ int main(int ac, char **av)
   printf("P used: %ld, Q used: %ld\n", p, q);
 
   //Generate RSA keys
-  t_rsa		results = rsa_keygen(p, q);
+  t_rsa	results = rsa_keygen(p, q);
 
   //Output Results
   printf("P: %ld\nQ: %ld\nN: %ld\nfi(N): %ld\nChosen e: %ld\nd: %ld\n",
