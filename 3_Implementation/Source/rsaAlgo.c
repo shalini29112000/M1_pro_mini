@@ -7,11 +7,11 @@ Choose d such that it satisfies the equation de = 1 + k (totient), d is the priv
 Cipher text is calculated using the equation c = m^e mod n where m is the message.
 With the help of c and d we decrypt message using equation m = c^d mod n where d is the private key.
 **************************************************/
-#include "modulars.h"
-#include "rsa.h"
-#include "primes.h"
+#include "modAlgo.h"
+#include "rsaAlgo.h"
+#include "primeAlgo.h"
 
-static long	pick_e(long fi)
+static long pick_e(long fi)
 {
   //Ensure a list of pirmes has been generated
   //if length is 0, user didn't pass paramaters, use defined limit
@@ -22,7 +22,7 @@ static long	pick_e(long fi)
     {
       //This will simply pick the first, not a great idea,
       //but simple to understand algo
-      if (g_prime_list.primes[i] % fi != 0 && gcd(g_prime_list.primes[i], fi) == 1)
+      if (g_prime_list.primeAlgo[i] % fi != 0 && gcd(g_prime_list.primes[i], fi) == 1)
 	return g_prime_list.primes[i];
     }
 
@@ -30,17 +30,17 @@ static long	pick_e(long fi)
   return 0;
 }
 
-long		rsa_encrypt(long msg, long e, long n)
+long	rsa_encrypt(long msg, long e, long n)// for encryption of data
 {
   return right_to_left(msg, e, n);
 }
 
-long		rsa_decrypt(long cyphertext, long d, long n)
+long	rsa_decrypt(long cyphertext, long d, long n)// for decryption of data
 {
   return right_to_left(cyphertext, d, n);
 }
 
-t_rsa		rsa_keygen(long p, long q)
+t_rsa	rsa_keygen(long p, long q) // key exchange between cipher text
 {
   t_rsa		ret = { 0 };
 
