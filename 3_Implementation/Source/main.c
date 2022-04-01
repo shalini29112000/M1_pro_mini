@@ -35,7 +35,7 @@ int main(int ac, char **av)
 
   //Output Results
   printf("P: %ld\nQ: %ld\nN: %ld\nfi(N): %ld\nChosen e: %ld\nd: %ld\n",
-	 p, q, results.n, results.fi, results.e, results.d);
+	 p, q, results.num, results.fi, results.e, results.d);
 
   if (g_prime_list.length != 0)
     free(g_prime_list.primeAlgo);
