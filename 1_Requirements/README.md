@@ -52,7 +52,7 @@ It is can be applied when the plain text is being transmitted over the channel a
 
 It can be applied from the Underwater Sensor Communication to the satellite application. From a household use to the worldwide application
 
-### Who:
+### How:
 
 This project is implemented to nullify security issuing, return the text essage after being encrypted.
 
